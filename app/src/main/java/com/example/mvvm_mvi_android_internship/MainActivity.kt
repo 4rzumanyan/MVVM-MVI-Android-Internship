@@ -7,11 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.mvvm_mvi_android_internship.ui.theme.MVVMMVIAndroidInternshipTheme
+import com.example.mvvm_mvi_android_internship.classroom.presentation.screen.ClassroomMainScreen
+import com.example.mvvm_mvi_android_internship.common_presentation.theme.MVVMMVIAndroidInternshipTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,28 +18,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             MVVMMVIAndroidInternshipTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    ClassroomMainScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MVVMMVIAndroidInternshipTheme {
-        Greeting("Android")
     }
 }

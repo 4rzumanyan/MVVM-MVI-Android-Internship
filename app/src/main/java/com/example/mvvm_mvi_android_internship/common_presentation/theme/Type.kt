@@ -1,4 +1,4 @@
-package com.example.mvvm_mvi_android_internship.ui.theme
+package com.example.mvvm_mvi_android_internship.common_presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
